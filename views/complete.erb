@@ -43,7 +43,7 @@
     </div>
    
     <div class="ms-5">
-        <h2>送信内容</h2>
+        <h4>送信内容</h4>
         <table class="table table-border">
             <% company = params["company"] %>
             <% name = params["name"] %>
@@ -75,7 +75,7 @@
             
             <tr>
                 <th>内容</th>
-                <td><%= content %></td>
+                <td><%= content.gsub(/\r\n|\r|\n/, "<br>") %></td>
             </tr>
             
             
